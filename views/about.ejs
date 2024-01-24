@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Lego Collection</title>
+</head>
+
+<body>
+  <%- include('partials/navbar', {page:'/about'}) %>
+
+  <div class="container mx-auto">
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">About me!</h1>
+          <p class="py-6">A bit of information about me</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <div>
+        <img class="object-center rounded-lg" src="/img/i_use_arch_btw.jpg"></img>
+      </div>
+      <div class="prose">
+        <p>My name is Vatsal. I am 20 years old.</p>
+        <p>
+          I am currently in my second year at Seneca Polytechnic for the Computer Programming & Analysis program. 
+          Most of my time is taken up by studying and doing assignments for my classes. When I'm not working on college stuff I enjoy going on walks, 
+          playing and listening to music, and playing calm video games such as, Stardew Valley, Slime Rancher and Animal Crossing. In addition to all this 
+          I also enjoy working on personal projects which are mostly just small projects which I just have fun with what I can create. I am also a Linux enthusiast, 
+          I use Arch linux as my daily driver, I have used other Linux distribution like Ubuntu, PopOS, Linux Mint, and many more, but I stuck to Arch linux as it's more challenging it's fun to overcome all it's issues it gives me.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

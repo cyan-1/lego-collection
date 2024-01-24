@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Lego Collection</title>
+</head>
+
+<body>
+  <%- include('partials/navbar', {page:'/home'}) %>
+
+  <div class="container mx-auto">
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">Hey!</h1>
+          <p class="py-6">Explore Edit or Add collections of Lego sets.
+            help him.</p>
+          <a class="btn btn-primary" href="/lego/sets/">Get Started</a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+        <div class="card bg-base-100 shadow-xl">
+          <figure><img class="object-cover h-72 w-86" src="https://cdn.rebrickable.com/media/sets/061-1.jpg"
+              alt="Five Large Base Plates - Green" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Five Large Base Plates - Green</h2>
+            <p>Five green base plates</p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/061-1" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card bg-base-100 shadow-xl">
+          <figure><img class="object-cover h-72 w-86" src="https://cdn.rebrickable.com/media/sets/062-1.jpg"
+              alt="Five Large Base Plates - White" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Five Large Base Plates - White</h2>
+            <p>Five white base plates</p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/062-1" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card bg-base-100 shadow-xl">
+          <figure><img class="object-cover h-72 w-86" src="https://cdn.rebrickable.com/media/sets/063-1.jpg"
+              alt="Farm" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Five Large Base Plates - Blue</h2>
+            <p>Five blue base plates</p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/063-1" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

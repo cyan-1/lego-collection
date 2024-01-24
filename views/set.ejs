@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Lego Collection</title>
+</head>
+
+<body>
+  <%- include('partials/navbar', {page:""}) %>
+
+  <div class="container mx-auto">
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold"><%=set.name%></h1>
+          <p class="py-6">Below, you will find detailed information about the set: <%=set.name%></p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="card lg:card-side bg-base-100 ">
+      <figure><img src="<%=set.img_url%>"/></figure>
+      <div class="card-body">
+        <ul class="prose">
+          <li><b>Set Name:</b> <%=set.name%></li>
+          <li><b>Year Released:</b> <%=set.year%></li>
+          <li><b>Theme:</b> <%=set.Theme.name%></li>
+          <li><b>Number of Parts:</b> <%=set.num_parts%></li>
+          <br>
+          <li><div id="quote"> </div></li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="#" onclick="history.back(); return false;">Return</a>
+          <%if(session.user) {%>
+            <a class="btn btn-success" href="/lego/editSet/<%=set.set_num%>"; return false;">Edit Set: <%=set.name%></a>
+          <%}%>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("https://quotable.io/random")
+        .then(response => response.json())
+        .then(data => {
+          const quote = data.content;
+          const author = data.author;
+          
+          document.getElementById('quote')
+            .innerHTML = `<p>"${quote}" <br>- <i>${author}</i> </p>`;
+        }).catch(err => console.log(err));
+    });
+  </script>
+</body>
+</html>
